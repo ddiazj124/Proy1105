@@ -14,9 +14,9 @@ class Conexion{
     {
         $this->objconn = new mysqli($this->dbHost,  $this->dbUser, $this->dbPass, $this->dbName);
                 if ($this->objconn->connect_errno) {
-                return "Fallo al conectar a MySQL: (" . $miconn->connect_errno . ") " . $miconn->connect_error;
+                return "Fallo al conectar a MySQL: (" . $this->objconn->connect_errno . ") " . $this->objconn->connect_error;
         }
-        return $miconn;
+        return TRUE;
     }
 }
 
