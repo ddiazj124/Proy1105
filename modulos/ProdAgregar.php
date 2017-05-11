@@ -13,5 +13,6 @@ $anio = $_POST["ano"];
 $query = "INSERT INTO PRODUCTOS (nombre,totalusd,ano) values($nombre,$total,$anio)";
 
 $resultado = $conn->Conectar()->query($query);
+//
 
 echo $resultado;
